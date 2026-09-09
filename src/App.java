@@ -68,7 +68,7 @@ public class App {
                 blue = rgb & 0xff;
                 green = (rgb & 0xff00) >> 8;
                 red = (rgb & 0xff0000) >> 16;
-                pixBrightness = (red + green + blue)/4;
+                pixBrightness = (red + green + blue)/3;
                 if (pixBrightness > 204) {
                     bw.append(' ');
                 }
