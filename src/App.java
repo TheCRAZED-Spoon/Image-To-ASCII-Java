@@ -1,5 +1,5 @@
-import java.awt.image.BufferedImage;
-import java.awt.*;
+import java.awt.Image;
+import java.awt.image.*;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -35,6 +35,8 @@ public class App {
             System.out.println("An error has occurred opening the image file:" + ioe.toString());
             System.exit(1);
         }
+
+        sc.close();
 
         int imWidth = bi.getWidth();
         int imHeight = bi.getHeight();
@@ -89,6 +91,8 @@ public class App {
         }
     
         bw.flush();
+        bw.close();
         System.out.println("Image converted to text and found at ./Out.txt");
+        System.exit(0);
     }
 }
